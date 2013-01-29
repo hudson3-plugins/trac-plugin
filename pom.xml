@@ -29,9 +29,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>1.409</version>
+    <groupId>org.eclipse.hudson.plugins</groupId>
+    <artifactId>hudson-plugin-parent</artifactId>
+    <version>3.0.0</version>
   </parent>
 
   <artifactId>trac</artifactId>
@@ -39,12 +39,12 @@
   <packaging>hpi</packaging>
 
   <name>Edgewall Trac Plugin</name>
-  <url>http://wiki.jenkins-ci.org/display/jenkins/Trac+Plugin</url>
+  <url>http://wiki.hudson-ci.org/display/HUDSON/Trac+Plugin</url>
 
   <licenses>
     <license>
       <name>The MIT license</name>
-      <url>https://github.com/jenkinsci/trac-plugin/raw/master/LICENSE.txt</url>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -76,38 +76,14 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/trac-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/trac-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/trac-plugin</url>
+    <connection>scm:git:git://github.com/hudson3-plugins/trac-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:hudson3-plugins/trac-plugin.git</developerConnection>
+    <url>https://github.com/hudson3-plugins/trac-plugin</url>
   </scm>
-
-  <repositories>
-    <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
-  <distributionManagement>
-    <repository>
-      <id>java.net-m2-repository</id>
-      <url>http://maven.jenkins-ci.org/content/repositories/releases/</url>
-    </repository>
-    <site>
-      <id>github-project-site</id>
-      <url>gitsite:git@github.com/jenkinsci/trac-plugin</url>
-    </site>
-  </distributionManagement>
 
   <properties>
     <!-- http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding -->
+    <hudsonTags>scm</hudsonTags>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <compileTarget>1.6</compileTarget>
     <!-- define all plugin versions -->
@@ -160,14 +136,14 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
+      <groupId>org.hudsonci.plugins</groupId>
       <artifactId>subversion</artifactId>
-      <version>1.37</version>
+      <version>2.3.7-h-1</version>
     </dependency>
     <dependency>
-      <groupId>org.jenkinsci.plugins</groupId>
+      <groupId>org.hudsonci.plugins</groupId>
       <artifactId>git</artifactId>
-      <version>1.1.14</version>
+      <version>2.2.1-h-1</version>
       <optional>true</optional>
     </dependency>
   </dependencies>
